@@ -25,10 +25,12 @@ function ProjectCards({ project }: ProjectCardsProps) {
           height={200}
           className="mx-auto h-[200px] w-[300px] rounded-sm object-cover"
         />
-        <h2 className="text-2xl font-semibold uppercase text-primary">
+        <h2 className="pt-3 text-lg font-semibold uppercase text-primary sm:text-2xl">
           {project.title}
         </h2>
-        <p className="text-foreground">{project.description}</p>
+        <p className="text-sm text-foreground sm:text-base">
+          {project.description}
+        </p>
 
         <div className="flex w-full gap-3 pt-8">
           <Button className="w-1/2 text-white" asChild>
@@ -38,12 +40,17 @@ function ProjectCards({ project }: ProjectCardsProps) {
             </Link>
           </Button>
 
-          {project.repo && (
+          {project.repo ? (
             <Button className="w-1/2 text-white" asChild>
               <Link href={project.repo} target="_blank">
                 Ver código
                 <SquareDashedBottomCode size={16} className="ml-2" />
               </Link>
+            </Button>
+          ) : (
+            <Button disabled className="w-1/2 text-white">
+              Ver código
+              <SquareDashedBottomCode size={16} className="ml-2" />
             </Button>
           )}
         </div>

@@ -55,7 +55,7 @@ export default function Home() {
     <>
       <Header />
 
-      <main>
+      <main className="pt-24">
         <section className="relative">
           <div className="mx-auto mt-12 grid max-w-[1410px] grid-cols-1 items-center px-5 lg:grid-cols-2">
             <div className="col-span-1 mx-auto lg:mx-0">
@@ -84,7 +84,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-span-1 flex items-center justify-center">
+            <div className="col-span-1 flex items-center justify-center pt-12 lg:pt-0">
               <Image
                 src="/perfil.png"
                 alt="matheus serafim"
