@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from '@/app/_components/ui/button'
 import { Card, CardContent } from '@/app/_components/ui/card'
 import {
@@ -9,10 +11,13 @@ import {
 
 import { Folder, Home, Leaf, Menu, NotebookTabs } from 'lucide-react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export function Header() {
+  const path = usePathname()
+
   return (
-    <header>
+    <header id="home">
       <Card className="hidden rounded-none border-none lg:block">
         <CardContent className="mx-auto flex max-w-[1410px] items-center justify-between py-6">
           <h1 className="text-2xl font-semibold text-primary">
@@ -21,16 +26,26 @@ export function Header() {
 
           <ul className="flex space-x-20 text-lg">
             <li>
-              <Link href={'/'}>Home</Link>
+              <Link
+                className={path === '/' ? 'text-primary' : 'text-white'}
+                href={'/#home'}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link href={'/'}>Sobre</Link>
+              <Link href={'/#sobre'}>Sobre</Link>
             </li>
             <li>
-              <Link href={'/'}>Projetos</Link>
+              <Link
+                className={path === '/projetos' ? 'text-primary' : 'text-white'}
+                href={'/projetos'}
+              >
+                Projetos
+              </Link>
             </li>
             <li>
-              <Link href={'/'}>Contato</Link>
+              <Link href={'/#contato'}>Contato</Link>
             </li>
           </ul>
         </CardContent>

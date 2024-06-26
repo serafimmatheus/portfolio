@@ -29,6 +29,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '../_components/ui/carousel'
+import ProjectCards from '../_components/ui/projects-card'
+import { projects } from '../api/mock'
 
 const schemaMessage = z.object({
   name: z.string().nullable(),
@@ -94,7 +96,7 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 right-0 h-[128px] w-full bg-card" />
         </section>
 
-        <section className="mx-auto mt-12 max-w-[1410px] px-5">
+        <section id="sobre" className="mx-auto mt-12 max-w-[1410px] px-5">
           <h2 className="text-2xl font-semibold text-primary md:text-3xl">
             Sobre:
           </h2>
@@ -215,7 +217,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
+        <section id="projetos">
           <div className="mx-auto mt-20 max-w-[1410px] px-5">
             <h2 className="text-2xl font-semibold text-primary md:text-3xl">
               Projetos em destaque:
@@ -235,45 +237,13 @@ export default function Home() {
               className="w-full"
             >
               <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
+                {projects.map((project, index) => (
                   <CarouselItem
                     key={index}
                     className="basis-[75%] md:basis-[45%] lg:basis-[30%] 2xl:basis-[20%]"
                   >
-                    <div className="p-1">
-                      <Card className="rounded-sm border-primary bg-transparent p-4">
-                        <CardContent className="space-y-2 p-0 text-center">
-                          <Image
-                            src="https://via.placeholder.com/300x200"
-                            alt="imagem"
-                            width={300}
-                            height={200}
-                            className="mx-auto rounded-sm"
-                          />
-                          <h2 className="text-2xl font-semibold uppercase text-primary">
-                            Serafa suplementos
-                          </h2>
-                          <p className="text-foreground">
-                            E-commerce construido em nextjs, com integração com
-                            o stripe.
-                          </p>
-
-                          <div className="flex w-full gap-3 pt-8">
-                            <Button className="w-1/2 text-white">
-                              Ver projeto
-                              <Eye size={16} className="ml-2" />
-                            </Button>
-
-                            <Button className="w-1/2 text-white">
-                              Ver código
-                              <SquareDashedBottomCode
-                                size={16}
-                                className="ml-2"
-                              />
-                            </Button>
-                          </div>
-                        </CardContent>
-                      </Card>
+                    <div className="h-full p-1">
+                      <ProjectCards project={project} />
                     </div>
                   </CarouselItem>
                 ))}
@@ -290,7 +260,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mx-auto mb-12 mt-20 max-w-[1410px] px-5">
+        <section
+          id="contato"
+          className="mx-auto mb-12 mt-20 max-w-[1410px] px-5"
+        >
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-primary md:text-3xl">
