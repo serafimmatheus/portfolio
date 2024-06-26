@@ -19,18 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="PT-BR">
-      <head>
-     
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3J3N537PH0"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-3J3N537PH0');
-        </script>
-      </head>
+    <html lang="pt-BR">
       <body className={`${poppins.className} dark scroll-smooth`}>
         <noscript>
           <iframe
