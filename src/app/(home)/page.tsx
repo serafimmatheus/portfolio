@@ -74,14 +74,26 @@ export default function Home() {
               </p>
 
               <div className="space-x-4">
-                <Button type="button" className="font-medium text-white">
-                  Sobre
-                  <User className="ml-2" size={16} />
+                <Button
+                  type="button"
+                  className="font-medium text-white"
+                  asChild
+                >
+                  <Link href={'/#sobre'}>
+                    Sobre
+                    <User className="ml-2" size={16} />
+                  </Link>
                 </Button>
 
-                <Button type="button" className="font-medium text-white">
-                  Projetos
-                  <Eye className="ml-2" size={16} />
+                <Button
+                  type="button"
+                  className="font-medium text-white"
+                  asChild
+                >
+                  <Link href={'/projetos'}>
+                    Projetos
+                    <Eye className="ml-2" size={16} />
+                  </Link>
                 </Button>
               </div>
             </div>
