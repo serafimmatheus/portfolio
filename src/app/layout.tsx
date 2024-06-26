@@ -21,6 +21,14 @@ export default function RootLayout({
   return (
     <html lang="PT-BR">
       <body className={`${poppins.className} dark scroll-smooth`}>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-W47TTF9V"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
         {children}
       </body>
     </html>
