@@ -20,6 +20,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="PT-BR">
+      <head>
+     
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3J3N537PH0"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-3J3N537PH0');
+        </script>
+      </head>
       <body className={`${poppins.className} dark scroll-smooth`}>
         <noscript>
           <iframe
@@ -29,6 +40,7 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
+
         {children}
       </body>
     </html>
