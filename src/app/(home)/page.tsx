@@ -95,8 +95,10 @@ export default function Home() {
         </section>
 
         <section className="mx-auto mt-12 max-w-[1410px] px-5">
-          <h2 className="text-3xl font-semibold text-primary">Sobre:</h2>
-          <p className="mt-3 text-lg">
+          <h2 className="text-2xl font-semibold text-primary md:text-3xl">
+            Sobre:
+          </h2>
+          <p className="mt-3 text-base md:text-lg">
             Sou um desenvolvedor Full Stack apaixonado e dedicado, com ampla
             experiência na criação de soluções web completas e funcionais. Com
             um profundo entendimento de tecnologias de front-end e back-end, eu
@@ -106,14 +108,16 @@ export default function Home() {
 
           <div className="">
             <div className="flex items-center gap-6">
-              <h2 className="text-8xl font-bold text-primary">2+</h2>
-              <p className="text-2xl font-medium text-foreground">
+              <h2 className="text-2xl font-bold text-primary sm:text-6xl md:text-8xl">
+                2+
+              </h2>
+              <p className="mt-2 text-base font-medium text-foreground sm:text-lg md:mt-0 md:text-2xl">
                 Anos de experiência. Especializado na criação de web sites,
                 garantindo uma experiência web perfeita para os usuários finais.
               </p>
             </div>
 
-            <div className="mt-14 grid grid-cols-4 gap-5">
+            <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-3 md:grid-cols-4">
               <Card className="rounded-sm bg-primary px-5 pb-4 pt-16">
                 <CardContent className="space-y-2 p-0">
                   <SquareDashedBottomCode size={32} />
@@ -139,11 +143,11 @@ export default function Home() {
         </section>
 
         <section className="mx-auto mt-20 max-w-[1410px] px-5">
-          <h2 className="text-3xl font-semibold text-primary">
+          <h2 className="text-2xl font-semibold text-primary md:text-3xl">
             Os serviços que ofereço:
           </h2>
 
-          <div className="mt-8 grid grid-cols-3 gap-5">
+          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
             <Card className="rounded-sm border-primary bg-transparent px-5 pb-4 pt-16">
               <CardContent className="space-y-2 p-0 text-center">
                 <SquareDashedBottomCode size={32} className="mx-auto" />
@@ -213,17 +217,17 @@ export default function Home() {
 
         <section>
           <div className="mx-auto mt-20 max-w-[1410px] px-5">
-            <h2 className="text-3xl font-semibold text-primary">
+            <h2 className="text-2xl font-semibold text-primary md:text-3xl">
               Projetos em destaque:
             </h2>
-            <p className="mt-2 w-2/3 text-lg font-medium">
+            <p className="mt-2 w-full text-base font-medium sm:w-2/3 md:text-lg">
               Eu trabalhei em muitos projetos ao longo da minha carreira como
               desenvolvedor web. Aqui estão alguns dos meus projetos ao vivo e
               do mundo real:
             </p>
           </div>
 
-          <div className="mt-8 select-none pl-8">
+          <div className="mt-8 select-none pl-5 md:pl-8">
             <Carousel
               opts={{
                 align: 'start',
@@ -234,7 +238,7 @@ export default function Home() {
                 {Array.from({ length: 5 }).map((_, index) => (
                   <CarouselItem
                     key={index}
-                    className="md:basis-1/8 lg:basis-[30%]"
+                    className="basis-[75%] md:basis-[45%] lg:basis-[30%] 2xl:basis-[20%]"
                   >
                     <div className="p-1">
                       <Card className="rounded-sm border-primary bg-transparent p-4">
@@ -255,12 +259,12 @@ export default function Home() {
                           </p>
 
                           <div className="flex w-full gap-3 pt-8">
-                            <Button className="w-full text-white">
+                            <Button className="w-1/2 text-white">
                               Ver projeto
                               <Eye size={16} className="ml-2" />
                             </Button>
 
-                            <Button className="w-full text-white">
+                            <Button className="w-1/2 text-white">
                               Ver código
                               <SquareDashedBottomCode
                                 size={16}
@@ -279,7 +283,7 @@ export default function Home() {
             </Carousel>
           </div>
 
-          <div className="flex w-full justify-end">
+          <div className="mx-auto flex w-full max-w-[1410px] justify-end">
             <Button variant="link" className="mt-8 flex text-white" asChild>
               <Link href={'/projetos'}>Ver mais projetos</Link>
             </Button>
@@ -287,20 +291,20 @@ export default function Home() {
         </section>
 
         <section className="mx-auto mb-12 mt-20 max-w-[1410px] px-5">
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
             <div className="space-y-4">
-              <h3 className="text-3xl font-semibold text-primary">
+              <h3 className="text-2xl font-semibold text-primary md:text-3xl">
                 Conecte-se comigo:
               </h3>
-              <p className="w-full max-w-[425px] text-lg">
+              <p className="w-full max-w-[425px] text-base md:text-lg">
                 Satisfeito comigo? Por favor, entre em contato comigo.
               </p>
 
               <Social />
             </div>
 
-            <div className="space-y-4">
-              <h3 className="text-2xl">
+            <div className="mt-8 space-y-4 md:mt-0">
+              <h3 className="text-lg md:text-2xl">
                 Entre em contato comigo, vamos criar algo incrível juntos.
               </h3>
 
