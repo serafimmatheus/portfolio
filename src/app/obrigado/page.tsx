@@ -22,7 +22,8 @@ function TankyouPage() {
             LinkedIn
             <LinkedinIcon size={24} />
           </Link>
-        </Button>{' '}
+        </Button>
+
         <Button variant="outline" className="flex gap-2 text-white" asChild>
           <Link
             href="https://www.linkedin.com/in/matheus-serafim-753893a7/"

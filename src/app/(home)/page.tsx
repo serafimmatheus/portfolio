@@ -196,8 +196,9 @@ export default function Home() {
                 </div>
                 <p className="font-bold uppercase">NPM E NODEJS</p>
                 <p className="text-foreground">
-                  Eu tenho um entendimento básico do NPM. Também consigo
-                  desenvolver aplicações de propósito geral com o Node.js.
+                  Eu tenho um entendimento avançado do NPM. Também consigo
+                  desenvolver aplicações back-end de propósito geral com o
+                  Node.js e nest.Js.
                 </p>
               </CardContent>
             </Card>
