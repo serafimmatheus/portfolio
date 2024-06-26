@@ -31,6 +31,7 @@ import {
 } from '../_components/ui/carousel'
 import ProjectCards from '../_components/ui/projects-card'
 import { projects } from '../api/mock'
+import { useRouter } from 'next/navigation'
 
 const schemaMessage = z.object({
   name: z.string().nullable(),
@@ -41,14 +42,15 @@ const schemaMessage = z.object({
 type Message = z.infer<typeof schemaMessage>
 
 export default function Home() {
+  const router = useRouter()
   const { register, handleSubmit, reset } = useForm<Message>({
     resolver: zodResolver(schemaMessage),
   })
 
-  async function handleMessage(data: Message) {
-    console.log(data)
-
+  async function handleMessage() {
     reset()
+
+    return router.push('/obrigado')
   }
 
   return (
