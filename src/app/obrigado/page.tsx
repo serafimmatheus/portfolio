@@ -25,10 +25,7 @@ function TankyouPage() {
         </Button>
 
         <Button variant="outline" className="flex gap-2 text-white" asChild>
-          <Link
-            href="https://www.linkedin.com/in/matheus-serafim-753893a7/"
-            target="_blank"
-          >
+          <Link href="/">
             Voltar para o site
             <Home size={18} />
           </Link>

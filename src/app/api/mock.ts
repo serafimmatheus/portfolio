@@ -5,7 +5,7 @@ export const projects = [
     description:
       'Site estatico construido em React/Vite, para a empresa do grupo Boticário.',
     image: '/aumigos.png',
-    link: 'https://aumigos.grupoboticario.com.br/',
+    link: 'https://www.aumigospets.com.br/',
     repo: '',
   },
   {
@@ -79,7 +79,7 @@ export const allProjects = [
     description:
       'Site estatico construido em React/Vite, para a empresa do grupo Boticário.',
     image: '/aumigos.png',
-    link: 'https://aumigos.grupoboticario.com.br/',
+    link: 'https://www.aumigospets.com.br/',
     repo: '',
   },
   {
