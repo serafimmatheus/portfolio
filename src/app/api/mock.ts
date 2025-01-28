@@ -84,11 +84,11 @@ export const allProjects = [
   },
   {
     id: 2,
-    title: 'Find a Friend',
+    title: 'Brasil meu Pet',
     description:
       'Aplicativo de doação de pets construido em NextJs, com backend em Nodejs.',
     image: '/find-a-friends.png',
-    link: 'front-find-a-friend-iioztcdbr-serafimmatheus.vercel.app',
+    link: 'brasilmeupet.com.br',
     repo: 'https://github.com/serafimmatheus/front-find-a-friend',
   },
   {
